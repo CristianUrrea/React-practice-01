@@ -5,16 +5,16 @@ const CrudTable = ({ data, setDataToEdit, deleteData }) => {
     return (
         <div>
             <h3>Tabla de Datos</h3>
-            <table>
+            <table className='table'>
                 <thead>
                     <tr>
-                        <th>Nombre</th>
-                        <th>Anime</th>
-                        <th>Acciones</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Anime</th>
+                        <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {data.length === 0 ? <tr><td colSpan="3">Sin datos</td></tr> : data.map(el => <CrudTableRow key={el.id} el={el} setDataToEdit={setDataToEdit} deleteData={deleteData} />)}
+                    {!data.length > 0 ? <tr><td colSpan="3">Sin datos</td></tr> : data.map(el => <CrudTableRow key={el.id} el={el} setDataToEdit={setDataToEdit} deleteData={deleteData} />)}
                 </tbody>
             </table>
         </div>

@@ -1,0 +1,29 @@
+{
+  "womans": [
+    {
+      "id": 1,
+      "name": "Rem",
+      "anime": "Re:Zero"
+    },
+    {
+      "id": 2,
+      "name": "Zero Two",
+      "anime": "Darling in The Franxx"
+    },
+    {
+      "id": 3,
+      "name": "Kaguya",
+      "anime": "Love Is War"
+    },
+    {
+      "id": 4,
+      "name": "Miku",
+      "anime": "The Quintessential Quintuplets"
+    },
+    {
+      "id": 5,
+      "name": "Esdeath",
+      "anime": "Akame Ga Kill"
+    }
+  ]
+}
