@@ -3,9 +3,8 @@ import { useFetch } from "../hooks/useFetch";
 import Loader from "./Loader";
 import Message from "./Message";
 
-const SelectList = ({ title, code, url, handleChange }) => {
+const SelectList = ({ title, code, codeType, url, handleChange }) => {
   const { data, error, loading } = useFetch(url);
-  console.log(data)
   if (!data) return null;
   if (error) {
     return (
@@ -28,7 +27,7 @@ const SelectList = ({ title, code, url, handleChange }) => {
         <option value="">Elige una {title}</option>
         {data &&
           options.map((el, index) => (
-            <option key={index} value={el['CCOM']}>
+            <option key={index} value={el[codeType]}>
               {el[code]}
             </option>
           ))}

@@ -15,6 +15,7 @@ const SelectsNested = () => {
       <SelectList
         title="comunidad"
         code="COM"
+        codeType="CCOM"
         url={`https://apiv1.geoapi.es/comunidades?type=JSON&key=${key}&sandbox=0`}
         handleChange={(e) => {
           console.log(e);
@@ -25,6 +26,7 @@ const SelectsNested = () => {
         <SelectList
           title="provincia"
           code="PRO"
+          codeType="CPRO"
           url={`https://apiv1.geoapi.es/provincias?CCOM=${state}&type=JSON&key=${key}&sandbox=0`}
           handleChange={(e) => {
             setTown(e.target.value);
@@ -35,6 +37,7 @@ const SelectsNested = () => {
         <SelectList
           title="municipio"
           code="DMUN50"
+          codeType="CMUM"
           url={`https://apiv1.geoapi.es/municipios?CPRO=${town}&type=JSON&key=${key}&sandbox=0`}
           handleChange={(e) => {
             setSuburb(e.target.value);
