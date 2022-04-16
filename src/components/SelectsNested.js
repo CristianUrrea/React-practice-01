@@ -18,7 +18,6 @@ const SelectsNested = () => {
         codeType="CCOM"
         url={`https://apiv1.geoapi.es/comunidades?type=JSON&key=${key}&sandbox=0`}
         handleChange={(e) => {
-          console.log(e);
           setState(e.target.value);
         }}
       />
